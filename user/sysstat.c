@@ -6,10 +6,13 @@ See the file LICENSE for details.
 
 #include "library/syscalls.h"
 #include "library/string.h"
+#include "library/stdio.h"
+
 
 int main(int argc, char *argv[])
 {
 	struct system_stats s = {0};
+	
 	if (syscall_system_stats(&s)) {
 		return 1;
 	}
